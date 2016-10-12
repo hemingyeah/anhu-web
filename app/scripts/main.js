@@ -12,7 +12,7 @@ angular.module('app')
 
       // config
       $scope.app = {
-        name: '网维',
+        name: '安乎',
         version: '1.3.3',
         // for chart colors
         color: {

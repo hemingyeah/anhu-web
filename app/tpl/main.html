@@ -1,0 +1,47 @@
+<div class="main-header">
+    <ul class="header-center">
+        <li>
+            <a href="">
+                <img src="/images/anhu/logo.png">
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="glyphicon glyphicon-user"></i> 欧莱雅
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="glyphicon glyphicon-question-sign"></i> 帮助中心
+            </a>
+        </li>
+        <li>
+            <a href class="dropdown-toggle" dropdown-toggle>
+                <i class="glyphicon glyphicon-envelope"></i>
+                <span class="badge badge-sm up bg-danger pull-right-xs">2</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="current-route">
+    <ol class="route">
+        <li><a href="">当前所在位置</a></li>
+        <span class="fa fa-angle-right"></span>
+        <li><a href="#">设置</a></li>
+        <span class="fa fa-angle-right"></span>
+        <li class="active">检测用量管理</li>
+    </ol>
+</div>
+<div class="main-center">
+    <!-- menu -->
+    <div data-ng-include=" 'tpl/blocks/aside.html' " class="aside-menu pull-left">
+    </div>
+    <!-- / menu -->
+    <!-- content -->
+    <div class="app-content">
+        <div ui-butterbar></div>
+        <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside"></a>
+        <div class="app-content-body fade-in-up" ui-view></div>
+    </div>
+    <!-- /content -->
+</div>

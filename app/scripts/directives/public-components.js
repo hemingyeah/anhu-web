@@ -21,9 +21,10 @@ app.directive("cusFile", function() {
         replace: true,
         template: function(e, a) {
             var html = $("<div></div>");
-            var item = $('<button class="btn btn-info file-btn" style="float: none; margin-top: 10px;">').appendTo(html);
-            item.html(a.value || "选择文件")
-            var input = $('<input type="file" id="fileInput" multiple="true" onchange="angular.element(this).scope().event.fileChange(event)">').appendTo(item);
+            var item = $('<button class="btn file-btn">').appendTo(html);
+            item.html($(
+                e).html() || "选择文件")
+            var input = $('<input type="file" multiple="true" onchange="angular.element(this).scope().event.fileChange(event)">').appendTo(item);
             return html[0].outerHTML;
         }
     }

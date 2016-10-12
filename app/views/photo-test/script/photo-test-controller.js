@@ -1,6 +1,6 @@
-app.controller('alipayCtrl', ['$scope', 'gridService', 'alipayService',
-    function($scope, gridService, alipayService) {
-        $scope.service = alipayService;
+app.controller('photoTestCtrl', ['$scope', 'gridService', 'photoTestService',
+    function($scope, gridService, photoTestService) {
+        $scope.service = photoTestService;
         gridService.gridInit($scope);
         //构造业务按钮
         $scope.businessBtns = [{

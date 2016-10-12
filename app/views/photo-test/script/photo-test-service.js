@@ -1,5 +1,5 @@
 //检索维权管理
-app.factory('alipayService', ['dataExchange', function(dataExchange) {
+app.factory('photoTestService', ['dataExchange', function(dataExchange) {
     return {
         loadData: function($scope, data, fun) {
             dataExchange.loadData({type: 'GET', url: 'api/alipay.json'}, {

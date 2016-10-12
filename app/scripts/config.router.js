@@ -33,9 +33,10 @@ angular.module('app')
             function($stateProvider, $urlRouterProvider) {
 
                 $urlRouterProvider
-                    .otherwise('/login'); //ipps 知识产权保护系统的缩写
+                    .otherwise('/login'); 
                 $stateProvider
                 /*网维路由配置*/
+                    //登录
                     .state('login', {
                         url: '/login',
                         templateUrl: 'views/login/login.html',
@@ -49,9 +50,23 @@ angular.module('app')
                             ]
                         }
                     })
-                    .state('ipps', {
-                        url: '/ipps',
-                        templateUrl: 'tpl/app.html',
+                    //注册
+                    .state('signup', {
+                        url: '/signup',
+                        templateUrl: 'views/signup/signup.html',
+                        resolve: {
+                            deps: ['$ocLazyLoad',
+                                function($ocLazyLoad) {
+                                    return $ocLazyLoad.load([
+                                        'views/signup/script/signup-controller.js'
+                                        ]);
+                                }
+                            ]
+                        }
+                    })
+                    .state('wlds', {//word limit detection system极限词检测系统的缩写
+                        url: '/wlds',
+                        templateUrl: 'tpl/main.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
@@ -60,39 +75,24 @@ angular.module('app')
                             ]
                         }
                     })
-                    //首页
-                    .state('ipps.dashboard', {
-                        url: '/dashboard',
-                        templateUrl: 'views/dashboard/dashboard.html',
-                        controller: "dashboardCtrl",
+                    //图片检测
+                    .state('wlds.photo', {
+                        url: '/photo',
+                        controller: "photoTestCtrl",
+                        templateUrl: 'views/photo-test/photo-test.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
                                     return $ocLazyLoad.load([
-                                        'views/dashboard/script/dashboard-controller.js',
-                                        'views/dashboard/script/dashboard-service.js'
-                                    ]);
-                                }
-                            ]
-                        }
-                    })
-                    //维权管理
-                    .state('ipps.rights', {
-                        url: '/rights',
-                        template: '<div ui-view class="fade-in-up" ng-init="app.Layout=true;" style="height:100%;"></div>',
-                        resolve: {
-                            deps: ['$ocLazyLoad',
-                                function($ocLazyLoad) {
-                                    return $ocLazyLoad.load([
-                                        // 'views/dashboard/script/dashboard-controller.js',
-                                        // 'views/dashboard/script/dashboard-service.js'
+                                        'views/photo-test/script/photo-test-controller.js',
+                                        'views/photo-test/script/photo-test-service.js'
                                     ]);
                                 }
                             ]
                         }
                     })
                     //检索维权
-                    .state('ipps.rights.search', {
+                    .state('wlds.rights.search', {
                         url: '/search',
                         templateUrl: 'views/search-rights/search-rights.html',
                         controller: "searchRightsCtrl",
@@ -108,7 +108,7 @@ angular.module('app')
                         }
                     })
                     //购买鉴定维权
-                    .state('ipps.rights.appraise', {
+                    .state('wlds.rights.appraise', {
                         url: '/appraise',
                         templateUrl: 'views/appraise-rights/appraise-rights.html',
                         controller: "appraiseRightsCtrl",
@@ -123,7 +123,7 @@ angular.module('app')
                             ]
                         }
                     })
-                    .state('ipps.settings', {
+                    .state('wlds.settings', {
                         url: '/settings',
                         template: '<div ui-view class="fade-in-up" ng-init="app.Layout=true;" style="height:100%;"></div>',
                         resolve: {
@@ -137,7 +137,7 @@ angular.module('app')
                         }
                     })
                     //设置--品牌代付支付宝
-                    .state('ipps.settings.alipay', {
+                    .state('wlds.settings.alipay', {
                         url: '/alipay',
                         templateUrl: 'views/alipay/alipay.html',
                         controller: "alipayCtrl",
@@ -153,7 +153,7 @@ angular.module('app')
                         }
                     })
                     //购买鉴定维权
-                    .state('ipps.settings.whitelist', {
+                    .state('wlds.settings.whitelist', {
                         url: '/whitelist',
                         templateUrl: 'views/white-list/white-list.html',
                         controller: "whiteListCtrl",

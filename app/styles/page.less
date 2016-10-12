@@ -1,0 +1,367 @@
+@import "public.less";
+
+/**
+ * 系统页面样式
+ */
+
+//登录页面
+.login {
+    background: #fff;
+    .header {
+        padding: 10px 0px;
+        position: relative;
+        .header-logo {
+            width: @center-width;
+            margin: 0px auto;
+            a.logo {
+                width: 120px;
+                height: 50px;
+                display: block;
+                background: url(/images/anhu/logo.jpg) no-repeat;
+            }
+        }
+    }
+    ;
+    .middle {
+        background-image: url(/images/anhu/banner1.jpg);
+        height: auto;
+        // min-height: 450px;
+        .middle-center {
+            width: @center-width;
+            margin: 0px auto;
+            min-height: 450px;
+            p:first-child {
+                font-size: 36px;
+            }
+            .title {
+                float: left;
+                position: relative;
+                top: 130px;
+                color: #fff;
+            }
+            .login-box {
+                background: #fff;
+                float: right;
+                position: relative;
+                top: 89px;
+                width: 286px;
+                .login-top {
+                    padding-top: 20px;
+                    form {
+                        .form-group {
+                            span.pull-right {
+                                color: @bg-blue;
+                                a {
+                                    color: @bg-blue;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .login-bottom {
+                    height: 60px;
+                    margin: 0px -15px;
+                    padding: 15px;
+                    background-color: rgb(248, 248, 250);
+                    span {
+                        margin-right: 7px;
+                        .icon-account {
+                            height: 26px;
+                            width: 26px;
+                            display: inline-block;
+                            float: right;
+                        }
+                        .icon-account.icon-taobao {
+                            //淘宝图标
+                            background: url(/images/anhu/icons.png) no-repeat;
+                            background-position: -104px -179px;
+                        }
+                        .icon-account.icon-wechat {
+                            //微信图标
+                            background: url(/images/anhu/icons.png) no-repeat;
+                            background-position: -52px -179px;
+                        }
+                        .icon-account.icon-weibo {
+                            //新浪微博图标
+                            background: url(/images/anhu/icons.png) no-repeat;
+                            background-position: -26px -179px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        position: relative;
+        display: block;
+        padding: 32px 0;
+        text-align: center;
+        color: #777;
+        line-height: 1;
+        font-size: 14px;
+    }
+}
+
+//注册页面
+.login {
+    background: #f0f3f4;
+    .header {
+        background: #fff;
+    }
+    .sign-up {
+        background-image: none;
+        margin-top: 30px;
+        .middle-center {
+            background: #fff;
+            min-height: 488px;
+            .sign-up-top {
+                .sign-up-title {
+                    font-weight: 600;
+                    padding: 20px;
+                }
+                .sign-up-info {
+                    .sign-up-input {
+                        width: 300px;
+                        margin: 45px auto;
+                        .goto-login {
+                            text-align: right;
+                            a {
+                                color: @bg-blue;
+                            }
+                        }
+                        span {
+                            background: #fff;
+                        }
+                        .form-group {
+                            .declare {
+                                margin-bottom: 20px;
+                            }
+                        }
+                        .third-party {
+                            text-align: center;
+                            margin: 66px 0px;
+                            & > div {
+                                padding: 0px;
+                            }
+                            a {
+                                // margin-right: 7px;
+                                display: inline-block;
+                                img {
+                                    width: 46px;
+                                }
+                                .icon-account {
+                                    height: 26px;
+                                    width: 26px;
+                                    display: block;
+                                    float: right;
+                                }
+                                .icon-account.icon-taobao {
+                                    //淘宝图标
+                                    background: url(/images/anhu/icons.png) no-repeat;
+                                    background-position: -104px -179px;
+                                }
+                                .icon-account.icon-wechat {
+                                    //微信图标
+                                    background: url(/images/anhu/icons.png) no-repeat;
+                                    background-position: -52px -179px;
+                                }
+                                .icon-account.icon-weibo {
+                                    //新浪微博图标
+                                    background: url(/images/anhu/icons.png) no-repeat;
+                                    background-position: -26px -179px;
+                                }
+                            }
+                        }
+                    }
+                    .nav-tabs {
+                        text-align: center;
+                        li {
+                            display: inline-block;
+                            float: none !important;
+                            a {
+                                border: none;
+                                padding: 10px 50px;
+                                margin: 0px;
+                            }
+                            &.active {
+                                a {
+                                    border: none;
+                                    border-bottom: 2px solid @bg-blue;
+                                    border-bottom-color: @bg-blue !important;
+                                    color: @bg-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//系统页面模板
+.main-header {
+    background: @bg-blue;
+    ul.header-center {
+        width: @center-width;
+        height: 50px;
+        margin: auto;
+        padding: 10px 0px;
+        a > img {
+            height: 30px;
+        }
+        list-style: none;
+        li {
+            display: inline-block;
+        }
+        li + li {
+            float: right;
+            margin-left: 20px;
+            a {
+                color: #fff;
+                i.glyphicon {
+                    margin-right: 5px;
+                }
+                span.bg-danger {
+                    background: @bg-yellow;
+                }
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.current-route {
+    height: 40px;
+    font-size: 12px;
+    width: @center-width;
+    margin: auto;
+    line-height: 40px;
+    ol.route {
+        list-style: none;
+        li {
+            display: inline-block;
+        }
+        span {
+            margin: 0px 5px;
+            font-size: 14px;
+        }
+    }
+}
+
+.main-center {
+    width: @center-width;
+    margin: auto;
+    .main-left {
+        width: 200px;
+        height: 500px;
+        background: #333;
+        float: left;
+    }
+    .app-content {
+        padding-left: 20px;
+        .app-content-body {
+            .divider {
+                height: 20px;
+                background: @bg-gray;
+                margin: 0px -20px;
+            }
+        }
+    }
+    .margin-right {
+        float: right;
+    }
+    .navi-wrap {
+        background: #fff;
+    }
+    .aside-menu {
+        width: 200px;
+        position: relative;
+        .aside-wrap {
+            min-height: 300px;
+            .navi {
+                // ul.nav {
+                //     li.active >a {
+                //         background: @bg-blue;
+                //     }
+                // }
+            }
+        }
+        .advertisement {
+            margin-top: 100px;
+            min-height: 260px;
+            .advertisement-img {
+                width: 160px;
+                margin: auto;
+                padding: 10px 0px;
+                border-top: 1px solid @bg-gray;
+                border-bottom: 1px solid @bg-gray;
+                img {
+                    width: 100%;
+                }
+            }
+            .advertisement-info {
+                padding: 20px;
+                font-size: 12px;
+            }
+        }
+    }
+    .aside-menu:before {
+        position: absolute;
+        top: 0;
+        bottom: 50px;
+        z-index: -1;
+        width: inherit;
+        background-color: #fff;
+        border: inherit;
+        content: "";
+    }
+}
+
+//图片检测页面样式
+.photo-test {
+    padding: 20px;
+    background: #fff;
+    .content-top {
+        .top-btn {
+            width: 150px;
+            margin: 30px auto;
+        }
+        .form-group {
+            margin: 20px -15px;
+        }
+        ul {
+            list-style-type: decimal;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+//list表格样式
+.table.table-hover {
+    tbody {
+        tr {
+            td:first-child{
+                width: 400px;
+                .test-title{
+                    padding: 10px 0px;
+                }
+                .test-content{
+                    img{
+                        float: left;
+                        width: 86px;
+                    }
+                    .text-words{
+                        margin-left: 100px;
+                        div + div{
+                            margin-top: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

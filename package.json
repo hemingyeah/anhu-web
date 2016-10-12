@@ -17,7 +17,8 @@
     "bower": "^1.7.7",
     "gulp": "^3.9.1",
     "gulp-connect": "^3.2.0",
-    "opn": "^4.0.1",
-    "gulp-sequence": "^0.4.5"
+    "gulp-less": "^3.1.0",
+    "gulp-sequence": "^0.4.5",
+    "opn": "^4.0.1"
   }
 }
