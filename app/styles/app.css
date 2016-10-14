@@ -8,14 +8,16 @@ html {
 
 body {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 12px !important;
     -webkit-font-smoothing: antialiased;
     line-height: 1.42857143;
     // color: #58666e;
     // color: #fff;
     background-color: transparent;
 }
-
+*{
+    font-size: 12px;
+}
 *:focus {
     outline: 0 !important;
 }
@@ -771,7 +773,7 @@ body {
 .app-content-body {
     float: left;
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .app-footer {

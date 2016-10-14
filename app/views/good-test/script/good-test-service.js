@@ -1,8 +1,8 @@
 //检索维权管理
-app.factory('appraiseRightsService', ['dataExchange', function(dataExchange) {
+app.factory('goodTestService', ['dataExchange', function(dataExchange) {
     return {
         loadData: function($scope, data, fun) {
-            dataExchange.loadData({type: 'GET', url: 'api/appraise-rights.json'}, {
+            dataExchange.loadData({type: 'GET', url: 'api/alipay.json'}, {
             }, function(data) {
                 if (fun) fun(data);
             })

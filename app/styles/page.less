@@ -174,26 +174,6 @@
                             }
                         }
                     }
-                    .nav-tabs {
-                        text-align: center;
-                        li {
-                            display: inline-block;
-                            float: none !important;
-                            a {
-                                border: none;
-                                padding: 10px 50px;
-                                margin: 0px;
-                            }
-                            &.active {
-                                a {
-                                    border: none;
-                                    border-bottom: 2px solid @bg-blue;
-                                    border-bottom-color: @bg-blue !important;
-                                    color: @bg-blue;
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -229,6 +209,17 @@
                 font-size: 12px;
             }
         }
+    }
+}
+
+.main-footer {
+    background: #fff;
+    .copy-right {
+        width: @center-width;
+        height: 50px;
+        line-height: 50px;
+        margin: auto;
+        text-align: center;
     }
 }
 
@@ -321,9 +312,20 @@
 
 //图片检测页面样式
 .photo-test {
+    col[class*="col-"] {
+        padding: 0px;
+    }
     padding: 20px;
     background: #fff;
     .content-top {
+        .top-info {
+            font-size: 20px;
+            font-weight: 900;
+        }
+        textarea {
+            min-height: 70px;
+            max-width: 100%;
+        }
         .top-btn {
             width: 150px;
             margin: 30px auto;
@@ -338,30 +340,91 @@
             }
         }
     }
+    .content-center {
+        .history {
+            padding: 35px 0px;
+            font-size: 14px;
+            line-height: 34px;
+            & > div.col-md-3 {
+                font-size: 14px;
+                font-weight: 900;
+            }
+            .search-box {
+                div.input-group {
+                    width: 100%;
+                }
+            }
+            .form-group {
+                padding: 0px;
+            }
+        }
+        .paging-box {
+            padding: 10px 0px;
+            border-top: 1px solid @gray-line;
+            border-bottom: 1px solid @gray-line;
+            & > div {
+                padding: 0px;
+            }
+            button {
+                font-size: 12px;
+            }
+            button.active {
+                background: @bg-gray;
+            }
+        }
+        .paging-box.paging-bottom {
+            border: none;
+        }
+        .paging-box.word-test {
+            border-top: none;
+            padding: 20px 0px;
+            div:first-child {
+                font-size: 14px;
+                font-weight: 900;
+            }
+        }
+    }
 }
 
-//list表格样式
 .table.table-hover {
     tbody {
         tr {
-            td:first-child{
+            td:first-child {
                 width: 400px;
-                .test-title{
-                    padding: 10px 0px;
+                .test-title {
+                    // padding: 10px 0px;
+                    padding-bottom: 10px;
                 }
-                .test-content{
-                    img{
+                .test-content {
+                    img {
                         float: left;
                         width: 86px;
+                        max-width: 86px;
+                        max-height: 86px;
                     }
-                    .text-words{
+                    .text-words {
                         margin-left: 100px;
-                        div + div{
+                        li:first-child {
+                            margin-bottom: 35px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: veritcal;
+                        }
+                        div + div {
                             margin-top: 35px;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+//店铺检测
+.shop-view{
+    .nav-tabs{
+        text-align: left;
     }
 }

@@ -1,5 +1,5 @@
-app.controller('photoTestCtrl', ['$scope', 'gridService', 'photoTestService',
-    function($scope, gridService, photoTestService) {
+app.controller('wordTestCtrl', ['$scope', 'gridService', 'wordTestService',
+    function($scope, gridService, wordTestService) {
         $scope.data = [{
             title: "李医生洁面乳材料",
             imgUrl: "/images/bg.jpg",

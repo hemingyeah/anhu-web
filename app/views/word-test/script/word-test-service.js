@@ -1,8 +1,8 @@
 //检索维权管理
-app.factory('searchRightsService', ['dataExchange', function(dataExchange) {
+app.factory('wordTestService', ['dataExchange', function(dataExchange) {
     return {
         loadData: function($scope, data, fun) {
-            dataExchange.loadData({type: 'GET', url: 'api/printers.json'}, {
+            dataExchange.loadData({type: 'GET', url: 'api/alipay.json'}, {
             }, function(data) {
                 if (fun) fun(data);
             })

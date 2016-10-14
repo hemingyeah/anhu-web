@@ -91,33 +91,49 @@ angular.module('app')
                             ]
                         }
                     })
-                    //检索维权
-                    .state('wlds.rights.search', {
-                        url: '/search',
-                        templateUrl: 'views/search-rights/search-rights.html',
-                        controller: "searchRightsCtrl",
+                    //文本检测
+                    .state('wlds.word', {
+                        url: '/word',
+                        controller: "wordTestCtrl",
+                        templateUrl: 'views/word-test/word-test.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
                                     return $ocLazyLoad.load([
-                                        'views/search-rights/script/search-rights-controller.js',
-                                        'views/search-rights/script/search-rights-service.js'
+                                        'views/word-test/script/word-test-controller.js',
+                                        'views/word-test/script/word-test-service.js'
                                     ]);
                                 }
                             ]
                         }
                     })
-                    //购买鉴定维权
-                    .state('wlds.rights.appraise', {
-                        url: '/appraise',
-                        templateUrl: 'views/appraise-rights/appraise-rights.html',
-                        controller: "appraiseRightsCtrl",
+                    //店铺检测
+                    .state('wlds.shop', {
+                        url: '/shop',
+                        controller: "shopTestCtrl",
+                        templateUrl: 'views/shop-test/shop-test.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
                                     return $ocLazyLoad.load([
-                                        'views/appraise-rights/script/appraise-rights-controller.js',
-                                        'views/appraise-rights/script/appraise-rights-service.js'
+                                        'views/shop-test/script/shop-test-controller.js',
+                                        'views/shop-test/script/shop-test-service.js'
+                                    ]);
+                                }
+                            ]
+                        }
+                    })
+                    //商品检测
+                    .state('wlds.good', {
+                        url: '/good',
+                        controller: "goodTestCtrl",
+                        templateUrl: 'views/good-test/good-test.html',
+                        resolve: {
+                            deps: ['$ocLazyLoad',
+                                function($ocLazyLoad) {
+                                    return $ocLazyLoad.load([
+                                        'views/good-test/script/good-test-controller.js',
+                                        'views/good-test/script/good-test-service.js'
                                     ]);
                                 }
                             ]
