@@ -3,85 +3,136 @@
         <div class="top-info">店铺概览</div>
         <uib-tabset active="" class="shop-view">
             <uib-tab index="0" heading="出售中">
-            dafaf
+                <div class="test-detail">
+                    <div class="cus-col-1 pic-box">
+                        <ul class="total-good">
+                            <li><img src="/images/a0.jpg"></li>
+                            <li>
+                                <p>368</p>
+                                <p>商品数</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cus-col-2 pic-box">
+                        <ul class="danger-good">
+                            <li><img src="/images/a0.jpg"></li>
+                            <li>
+                                <p>145</p>
+                                <p>商品数</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cus-col-3 pic-box">
+                        <ul class="safe-score">
+                            <li> <img src="/images/a0.jpg"></li>
+                            <li>
+                                <p>12</p>
+                                <p>安全分数</p>
+                            </li>
+                            <li>极度危险</li>
+                            <li>
+                                <button class="btn btn-ww">查看详情</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </uib-tab>
             <uib-tab index="1" heading="仓库中">
-            fdasfdaf
+                <div class="test-detail">
+                    <div class="cus-col-1 pic-box">
+                        <ul class="total-good">
+                            <li><img src="/images/a0.jpg"></li>
+                            <li>
+                                <p>512</p>
+                                <p>商品数</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cus-col-2 pic-box">
+                        <ul class="danger-good">
+                            <li><img src="/images/a0.jpg"></li>
+                            <li>
+                                <p>336</p>
+                                <p>商品数</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cus-col-3 pic-box">
+                        <ul class="safe-score">
+                            <li> <img src="/images/a0.jpg"></li>
+                            <li>
+                                <p>56</p>
+                                <p>安全分数</p>
+                            </li>
+                            <li>良好</li>
+                            <li>
+                                <button class="btn btn-ww">查看详情</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </uib-tab>
         </uib-tabset>
     </div>
     <div class="divider"></div>
-    <div class="content-center">
-        <form class="form-inline history clearfix" role="form">
-            <div class="form-group col-md-3">
-                历史检测记录
-            </div>
-            <div class="form-group pull-right col-md-5 search-box">
-                <div class="input-group">
-                    <input class="form-control" type="email" placeholder="输入图片名称进行搜索">
-                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                </div>
-            </div>
-        </form>
-        <div class="paging-box clearfix">
-            <div class="btn-group col-md-3">
-                <button type="button" class="btn btn-default active">编辑时间</button>
-                <button type="button" class="btn btn-default">检测时间</button>
-            </div>
-            <div class="paging col-md-7 pull-right">
-                <span>共<strong>153</strong>件检测报告  <strong>1</strong>/<strong>13</strong> </span>
-                <span>
-                    <i class="fa fa-angle-left"></i>
-                    <i class="fa fa-angle-right active"></i>
-                </span>
-            </div>
-        </div>
-        <table class="table table-hover ww-list">
-            <tbody>
-                <tr ng-repeat="row in data">
-                    <td>
-                        <div class="test-title"><span>图片名称</span>：<span ng-bind="row.title"></span></div>
-                        <div class="test-content clearfix">
-                            <img ng-src="{{row.imgUrl}}">
-                            <ul class="text-words">
-                                <li ng-bind="row.imgContent"></li>
-                                <li><span>编辑时间</span>：<span ng-bind="row.editTime"></span></li>
-                            </ul>
-                        </div>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>
-                                检测编号：<span ng-bind="row.code"></span>
-                            </li>
-                            <li>
-                                检测时间：<span ng-bind="row.testTime"></span>
-                            </li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>检测状态：<span ng-bind="row.state"></span></li>
-                            <li>匹配敏感词量：<span ng-bind="row.matchedNum"></span></li>
-                            <li>确认违禁词量：<span ng-bind="row.confirmedNum"></span></li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li><a href="">查看详情</a></li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="paging-box paging-bottom clearfix">
-            <div class="paging col-md-7 pull-right">
-                <span>共<strong>153</strong>件检测报告  <strong>1</strong>/<strong>13</strong> </span>
-                <span>
-                <i class="fa fa-angle-left"></i>
-                <i class="fa fa-angle-right"></i>
-            </span>
-            </div>
+    <div class="content-center shop">
+        <div class="top-info">危险商品</div>
+        <uib-tabset active="" class="shop-view">
+            <uib-tab index="0" heading="出售中">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>检测样本</th>
+                            <th>检测时间</th>
+                            <th>匹配敏感词数量</th>
+                            <th>已确认违禁词数量</th>
+                            <th>安全分数</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in data">
+                            <td>{{$index + 1}}</td>
+                            <td ng-bind="row.code"></td>
+                            <td ng-bind="row.testTime"></td>
+                            <td ng-bind="row.matchedNum"></td>
+                            <td ng-bind="row.confirmedNum"></td>
+                            <td ng-bind="row.safeScore"></td>
+                            <td>查看详情</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </uib-tab>
+            <uib-tab index="1" heading="仓库中">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>检测样本</th>
+                            <th>检测时间</th>
+                            <th>匹配敏感词数量</th>
+                            <th>已确认违禁词数量</th>
+                            <th>安全分数</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in data">
+                            <td>{{$index + 1}}</td>
+                            <td ng-bind="row.code"></td>
+                            <td ng-bind="row.testTime"></td>
+                            <td ng-bind="row.matchedNum"></td>
+                            <td ng-bind="row.confirmedNum"></td>
+                            <td ng-bind="row.safeScore"></td>
+                            <td>查看详情</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </uib-tab>
+        </uib-tabset>
+        <div class="show-more">
+            <a href="">查看更多危险商品</a>
         </div>
     </div>
 </div>

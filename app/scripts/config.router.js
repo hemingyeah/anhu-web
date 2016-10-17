@@ -44,6 +44,7 @@ angular.module('app')
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
                                     return $ocLazyLoad.load([
+                                        'views/login/script/login-service.js',
                                         'views/login/script/login-controller.js'
                                         ]);
                                 }

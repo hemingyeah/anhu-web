@@ -26,11 +26,11 @@
  * }
  */
 
-app.factory('httpService', ['$http', '$state', 'loading',
+app.factory('httpService', ['$http', '$state', 'loading', 'service',
 
-    function($http, $state, loading) {
+    function($http, $state, loading, service) {
 
-        var service = {};
+        var obj = {};
         loading = loading;
         var requestData = function() {
             return {
@@ -61,7 +61,7 @@ app.factory('httpService', ['$http', '$state', 'loading',
             }
         };
 
-        service.ajax = function(req) {
+        obj.ajax = function(req) {
             req = $.extend(requestData(), req);
             loading.show();
 
@@ -71,7 +71,8 @@ app.factory('httpService', ['$http', '$state', 'loading',
                 responseType: req.dataType,
                 timeout: 5000,
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Authenticate": service.cookie.get("token")
                 },
                 params: "get,delete".indexOf(req.type.toLowerCase()) > -1 ? req.data : {},
                 data: "post,put".indexOf(req.type.toLowerCase()) > -1 ? req.data : {}
@@ -84,7 +85,7 @@ app.factory('httpService', ['$http', '$state', 'loading',
         };
 
         //通过jquery发送请求
-        service.ajaxSend = function(req) {
+        obj.ajaxSend = function(req) {
 
             //设置headers
             var token = app.caches.getItem("token");
@@ -123,12 +124,12 @@ app.factory('httpService', ['$http', '$state', 'loading',
             return dtd.promise();
         }
 
-        service.responseHandle = function(data, fun) {
+        obj.responseHandle = function(data, fun) {
 
             responseHandle(data, fun);
         };
 
-        return service;
+        return obj;
 
     }
 ]);

@@ -33,3 +33,16 @@ app.factory('loading', [function() {
     };
     return loading;
 }]);
+app.factory('service', [function() {
+    var obj = {
+        cookie: {
+            get: function(key) {
+                return sessionStorage.getItem(key);
+            },
+            set: function(key, value) {
+                sessionStorage.setItem(key, value);
+            }
+        }
+    }
+    return obj;
+}]);

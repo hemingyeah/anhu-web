@@ -9,7 +9,9 @@ app.controller('shopTestCtrl', ['$scope', 'gridService', 'shopTestService',
             code: "2131654321",
             state: "已检测",
             matchedNum: "1000",
-            confirmedNum: "666"
+            confirmedNum: "666",
+            safeScore: "98",
+            btn: "查看详情"
         }, {
             title: "李医生洁面乳材料",
             imgUrl: "/images/bg.jpg",
@@ -19,7 +21,9 @@ app.controller('shopTestCtrl', ['$scope', 'gridService', 'shopTestService',
             code: "2131654321",
             state: "已检测",
             matchedNum: "1000",
-            confirmedNum: "666"
+            confirmedNum: "666",
+            safeScore: "98",
+            btn: "查看详情"
         }, {
             title: "李医生洁面乳材料",
             imgUrl: "/images/bg.jpg",
@@ -29,7 +33,9 @@ app.controller('shopTestCtrl', ['$scope', 'gridService', 'shopTestService',
             code: "2131654321",
             state: "已检测",
             matchedNum: "1000",
-            confirmedNum: "666"
+            confirmedNum: "666",
+            safeScore: "98",
+            btn: "查看详情"
         }, {
             title: "李医生洁面乳材料",
             imgUrl: "/images/bg.jpg",
@@ -39,7 +45,9 @@ app.controller('shopTestCtrl', ['$scope', 'gridService', 'shopTestService',
             code: "2131654321",
             state: "已检测",
             matchedNum: "1000",
-            confirmedNum: "666"
+            confirmedNum: "666",
+            safeScore: "98",
+            btn: "查看详情"
         }, {
             title: "李医生洁面乳材料",
             imgUrl: "/images/bg.jpg",
@@ -49,7 +57,9 @@ app.controller('shopTestCtrl', ['$scope', 'gridService', 'shopTestService',
             code: "2131654321",
             state: "已检测",
             matchedNum: "1000",
-            confirmedNum: "666"
+            confirmedNum: "666",
+            safeScore: "98",
+            btn: "查看详情"
         }]
     }
 ])
