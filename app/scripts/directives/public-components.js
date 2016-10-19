@@ -21,7 +21,7 @@ app.directive("cusFile", function() {
         replace: true,
         template: function(e, a) {
             var html = $("<div></div>");
-            var item = $('<button class="btn file-btn">').appendTo(html);
+            var item = $('<button class="form-control btn file-btn">').appendTo(html);
             item.html($(
                 e).html() || "选择文件")
             var input = $('<input type="file" multiple="true" onchange="angular.element(this).scope().event.fileChange(event)">').appendTo(item);

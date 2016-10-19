@@ -46,34 +46,34 @@
         <table class="table table-hover ww-list">
             <tbody>
                 <tr ng-repeat="row in data">
-                    <td>
-                        <div class="test-title"><span>图片名称</span>：<span ng-bind="row.title"></span></div>
+                    <td class="cus-col-1">
+                        <div class="test-title"><span>图片名称 : &nbsp</span><span ng-bind="row.title"></span></div>
                         <div class="test-content clearfix">
                             <img ng-src="{{row.imgUrl}}">
                             <ul class="text-words">
                                 <li ng-bind="row.imgContent"></li>
-                                <li><span>编辑时间</span>：<span ng-bind="row.editTime"></span></li>
+                                <li><span>编辑时间 : &nbsp</span><span ng-bind="row.editTime"></span></li>
                             </ul>
                         </div>
                     </td>
-                    <td>
+                    <td class="cus-col-2">
                         <ul>
                             <li>
-                                检测编号：<span ng-bind="row.code"></span>
+                                <span>检测编号 : &nbsp</span><span ng-bind="row.code"></span>
                             </li>
                             <li>
-                                检测时间：<span ng-bind="row.testTime"></span>
+                                <span>检测时间 : &nbsp</span><span ng-bind="row.testTime"></span>
                             </li>
                         </ul>
                     </td>
-                    <td>
+                    <td class="cus-col-3">
                         <ul>
-                            <li>检测状态：<span ng-bind="row.state"></span></li>
-                            <li>匹配敏感词量：<span ng-bind="row.matchedNum"></span></li>
-                            <li>确认违禁词量：<span ng-bind="row.confirmedNum"></span></li>
+                            <li><span>检测状态 : &nbsp</span><button class="btn btn-xs ww-gold" ng-bind="row.state"></button></li>
+                            <li><span>匹配敏感词量 : &nbsp</span><span ng-bind="row.matchedNum"></span></li>
+                            <li><span>确认违禁词量 : &nbsp</span><span ng-bind="row.confirmedNum"></span></li>
                         </ul>
                     </td>
-                    <td>
+                    <td class="cus-col-4">
                         <ul>
                             <li><a href="">查看详情</a></li>
                         </ul>
@@ -86,7 +86,7 @@
                 <span>共<strong>153</strong>件检测报告  <strong>1</strong>/<strong>13</strong> </span>
                 <span>
                 <i class="fa fa-angle-left"></i>
-                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-right active"></i>
             </span>
             </div>
         </div>

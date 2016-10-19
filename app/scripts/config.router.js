@@ -40,6 +40,7 @@ angular.module('app')
                     .state('login', {
                         url: '/login',
                         templateUrl: 'views/login/login.html',
+                        controller: "loginCtrl",
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
@@ -55,11 +56,13 @@ angular.module('app')
                     .state('signup', {
                         url: '/signup',
                         templateUrl: 'views/signup/signup.html',
+                        controller: "signupCtrl",
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
                                     return $ocLazyLoad.load([
-                                        'views/signup/script/signup-controller.js'
+                                        'views/signup/script/signup-controller.js',
+                                        'views/signup/script/signup-service.js'
                                         ]);
                                 }
                             ]

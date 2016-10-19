@@ -1,5 +1,13 @@
 app.controller('goodTestCtrl', ['$scope', 'gridService', 'goodTestService',
     function($scope, gridService, goodTestService) {
+        $scope.operation = {
+            dropdown: false
+        };
+        $scope.event = {
+            showSearchPanel: function () {
+                $scope.operation.dropdown = !$scope.operation.dropdown;
+            }
+        }
         $scope.data = [{
             title: "李医生洁面乳材料",
             imgUrl: "/images/bg.jpg",

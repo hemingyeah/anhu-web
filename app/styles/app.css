@@ -190,6 +190,8 @@ a:hover .caret-white {
     border-color: #d7dee1;//UI
     border-radius: 2px;
     font-size: 12px;
+    height: 40px;//UI
+    color: #c0c5c9 !important;//UI
 }
 
 .form-control,
@@ -332,8 +334,13 @@ a.list-group-item.hover {
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-    background-color: #f6f8f8;
+    // background-color: #f6f8f8;
+    background-color: #ebf3f9;//UI
+    border-left-style: solid;  
+    border-left-width: 1px;  
+    border-left-color: red; 
 }
+
 
 .nav.nav-lg > li > a {
     padding: 20px 20px;
@@ -378,6 +385,9 @@ a.list-group-item.hover {
 .nav-tabs > li:hover > a,
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover {
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px; 
     border-color: #dee5e7;
 }
 
@@ -777,7 +787,7 @@ body {
 .app-content-body {
     float: left;
     width: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 
 .app-footer {
@@ -1197,10 +1207,20 @@ body {
 .navi ul.nav li {
     position: relative;
     display: block;
+    margin-bottom: 10px;
 }
+/**
+ * UI
+ */
+// .navi ul.nav li:active a{
+//     background: red;
+// }
+
 
 .navi ul.nav li li a {
     padding-left: 55px;
+    // margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .navi ul.nav li a {
@@ -1498,7 +1518,7 @@ body {
     }
 }
 
-.arrow {
+/*.arrow {
     z-index: 10;
     border-width: 9px;
 }
@@ -1722,7 +1742,7 @@ body {
 .arrow.pull-down {
     top: auto;
     bottom: 19px;
-}
+}*/
 
 .btn {
     font-weight: 500;

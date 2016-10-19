@@ -1,5 +1,16 @@
 
 # Bower components
 
-/app/bower-components/*
 /node_modules/*
+
+/app/bower-components/*/*
+!/app/bower-components/echarts/*
+!/app/bower-components/super-slide/*
+!/app/bower-components/ag-grid/dist/ag-grid-enterprise.js
+!/app/bower-components/angular-bootstrap/ui-bootstrap-tpls.js
+!/app/bower-components/gridReport/*
+!/app/bower-components/lodop/*
+!/app/bower-components/adm-dtp/*
+!/app/bower-components/util/*
+!/app/bower-components/AngularJS-Toaster/*
+!/app/bower-components/angular-socket-io/*
