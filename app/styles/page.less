@@ -728,12 +728,101 @@
 
 //商品
 .search-good {
+    margin-bottom: 30px;
     position: relative;
+    #search-good:focus {
+        //input框焦点
+    }
+    .input-group {
+        .input-group-addon.click-down {
+            position: absolute;
+            top: 0px;
+            right: 39px;
+            z-index: 2;
+            /* overflow: hidden; */
+            width: 40px;
+            height: 40px;
+            padding: 12px;
+            background: #fff;
+            border-left: 0px;
+            border-right: 0px;
+        }
+    }
     .dropdown-box {
+        padding: 0px 20px;
         border: 1px solid @gray-line;
         position: absolute;
         top: 40px;
         z-index: 100;
         background: #ffffff;
+        .dropdown-box-top {
+            padding-bottom: 20px;
+            padding-top: 10px;
+
+            .col-md-4 {
+                .form-group {
+                    margin: 10px 0px;
+                    .declare {
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                    }
+                    input{
+                        height: 32px;
+                    }
+                    .ui-select-toggle {
+                        height: 32px;
+                    }
+                    .cus-col-1 {
+                        width: 46%;
+                    }
+                    .cus-col-2 {
+                        width: 8%;
+                        text-align: center;
+                        line-height: 32px;
+                        font-size: 16px;
+                    }
+                    .cus-col-3 {
+                        width: 46%;
+                    }
+                }
+            }
+            .col-md-4:nth-child(2) {
+                .form-group:last-child {
+                    margin-top: 20px;
+                }
+            }
+        }
+        .dropdown-box-bottom {
+            padding: 20px 0px;
+            border-top: 1px solid @gray-line;
+            button {
+                padding: 6px 25px;
+            }
+            button:first-child {
+                background: @bg-btn;
+                margin-left: 20px;
+            }
+            button:last-child {
+                background: @bg-blue;
+            }
+        }
+    }
+}
+.content-center.good-test {
+    padding-top: 30px;
+    .paging-box {
+        .btn-group {
+            a {
+                color: @bg-blue;
+            }
+        }
+    }
+    .filter-items {
+        padding: 10px 0px;
+        border-top: 1px solid @gray-line;
+        button {
+            font-size: 12px;
+            color: @font-color-title;
+        }
     }
 }

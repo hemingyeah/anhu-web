@@ -1,5 +1,16 @@
 app.controller('goodTestCtrl', ['$scope', 'gridService', 'goodTestService',
     function($scope, gridService, goodTestService) {
+        $("#search-good").focus(function () {
+            $(".click-down").css("border-color","#008afa");
+        })
+        $("#search-good").blur(function () {
+            $(".click-down").css("border-color","#d7dee1");
+        })
+        $scope.itemArray1 = [
+            { id: 1, name: '品牌批次    ' },
+            { id: 2, name: '投诉Id' },
+            { id: 3, name: '卖家昵称' }
+        ];
         $scope.operation = {
             dropdown: false
         };

@@ -143,46 +143,33 @@ angular.module('app')
                             ]
                         }
                     })
-                    .state('wlds.settings', {
-                        url: '/settings',
-                        template: '<div ui-view class="fade-in-up" ng-init="app.Layout=true;" style="height:100%;"></div>',
+                    //设置
+                    .state('wlds.account', {
+                        url: '/account',
+                        controller: "accountCtrl",
+                        templateUrl: 'views/account/account.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
                                     return $ocLazyLoad.load([
-                                        //
+                                        'views/account/script/account-controller.js',
+                                        'views/account/script/account-service.js'
                                     ]);
                                 }
                             ]
                         }
                     })
-                    //设置--品牌代付支付宝
-                    .state('wlds.settings.alipay', {
-                        url: '/alipay',
-                        templateUrl: 'views/alipay/alipay.html',
-                        controller: "alipayCtrl",
+                    //设置
+                    .state('wlds.amount', {
+                        url: '/amount',
+                        controller: "amountCtrl",
+                        templateUrl: 'views/amount/amount.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
                                 function($ocLazyLoad) {
                                     return $ocLazyLoad.load([
-                                        'views/alipay/script/alipay-controller.js',
-                                        'views/alipay/script/alipay-service.js'
-                                    ]);
-                                }
-                            ]
-                        }
-                    })
-                    //购买鉴定维权
-                    .state('wlds.settings.whitelist', {
-                        url: '/whitelist',
-                        templateUrl: 'views/white-list/white-list.html',
-                        controller: "whiteListCtrl",
-                        resolve: {
-                            deps: ['$ocLazyLoad',
-                                function($ocLazyLoad) {
-                                    return $ocLazyLoad.load([
-                                        'views/white-list/script/white-list-controller.js',
-                                        'views/white-list/script/white-list-service.js'
+                                        'views/amount/script/amount-controller.js',
+                                        'views/amount/script/amount-service.js'
                                     ]);
                                 }
                             ]
