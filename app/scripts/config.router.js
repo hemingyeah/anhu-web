@@ -159,7 +159,7 @@ angular.module('app')
                             ]
                         }
                     })
-                    //设置test
+                    //设置
                     .state('wlds.amount', {
                         url: '/amount',
                         controller: "amountCtrl",
